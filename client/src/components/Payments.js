@@ -5,6 +5,13 @@ import * as actions from '../actions'
 
 export class Payments extends Component {
     render() {
+        const btn_css={
+            backgroundColor:'#b3ccff',
+            border:'none',
+            color:'white',
+            padding:'3% 5%',
+            cursor:'pointer'
+        }
         return (
             <StripeCheckout
                 name='Emaily'
@@ -14,7 +21,7 @@ export class Payments extends Component {
                 token={token=>this.props.handleToken(token)} //callback function to be called after succesfully recieving a token from stripe
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
             >
-                <button className="btn">Add Credits</button>
+                <button style={btn_css}>Add Credits</button>
             </StripeCheckout>
         )
     }

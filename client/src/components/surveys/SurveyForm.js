@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 import SurveyField from './SurveyField'
 import validateEmails from '../../utils/validateEmails'
 import formFields from './formFields'
-
+import {AiOutlineRight} from 'react-icons/ai'
 
 
 class SurveyForm extends Component {
@@ -18,16 +18,47 @@ class SurveyForm extends Component {
 
 
     render() {
+
+        const wrapper_css={
+            margin:'1% 20%'
+        }
+
+        const nextBtn_css={
+            float:'right',
+            backgroundColor:'rgb(179, 204, 255)',
+            border:'none',
+            color:'white',
+            padding:'2% 5%',
+            cursor:'pointer',
+            fontSize:'16px',
+        }
+
+        const cancelBtn_css={
+            backgroundColor:'#f95050',
+            border:'none',
+            color:'white',
+            padding:'2% 5%',
+            cursor:'pointer',
+            fontSize:'16px'
+        }
+
+        const nextIcon_css={
+            position:'relative',
+            top:'2px'
+        }
+
+
         return (
-            <div>
+            <div style={wrapper_css}>
                 <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
                 {this.renderFields()}
-                <Link to='/surveys' className='red btn-flat white-text'>
-                Cancel
+                <Link to='/surveys'>
+                    <button style={cancelBtn_css}>
+                        CANCEL
+                    </button>   
                 </Link>
-                <button className='teal btn-flat right white-text' type='submit'>
-                    next
-                    <i className='material-icons right'>done</i>
+                <button style={nextBtn_css} className='teal btn-flat right white-text' type='submit'>
+                    NEXT <AiOutlineRight style={nextIcon_css}/>
                     </button>
                     
                 </form>

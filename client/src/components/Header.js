@@ -5,37 +5,66 @@ import Payments from './Payments'
 
 export class Header extends Component {
     
-    renderContent(){
+    renderContent(link_css){
+        const header_element={
+            padding:'0 2%'
+        }
         switch (this.props.auth){
             case null:
                 return
             case false: 
                 return (
-                    <li><a href="/auth/google">Login with Google</a></li>
+                    <div><Link style={link_css} to="/auth/google">Login with Google</Link></div>
                 )
             default:
                 return [
-                <li key='1'><Payments/></li>,
-                <li key='3' style={{margin:'0 20px'}}>Credits: {this.props.auth.credits}</li>,
-                <li key='2'><a href="/api/logout">Logout</a></li>
+                <div style={header_element} key='1'><Payments/></div>,
+                <div style={header_element} key='3'>Credits: {this.props.auth.credits}</div>,
+                <div style={header_element} key='2'><Link style={link_css} to="/api/logout">Logout</Link></div>
             ]
         }
     }
+
     render(){
+        const wrapper_css={
+            width:'100%',
+            display:'grid',
+            gridTemplateColumns: '30% 70%',
+            backgroundColor:'#ff9999',
+            color:'white',
+            padding:'1% 0'
+        }
+        const left_css={
+            width:'100%',
+            fontSize:'200%',
+            paddingLeft:'2%'
+        }
+        const right_css={
+            width:'100%',
+            display:'flex',
+            justifyContent:'flex-end',
+            alignItems:'center',
+            fontSize:'110%'
+        }
+        const link_css={
+            color:'inherit',
+            textDecoration: 'none'
+        }
+
+
         return (
-            <nav>
-                <div className="nav-wrapper">
-                    <Link 
-                        to={this.props.auth ? '/surveys' : '/'} 
-                        className="left brand-logo"
-                        >
-                        Emaily
-                    </Link>
-                    <ul className="right">
-                        {this.renderContent()}
-                    </ul>
+            
+                <div style={wrapper_css}>
+                   <div style={left_css}> 
+                        <Link style={link_css} to={this.props.auth ? '/surveys' : '/'}>
+                            Emaily
+                        </Link>
+                    </div>
+                    <div style={right_css}>   
+                        {this.renderContent(link_css)}
+                    </div>
                 </div>
-            </nav>
+            
         )
     }
 }

@@ -14,9 +14,16 @@ class App extends Component {
         this.props.fetchUser();
     }
     render(){
+
+        const container_css={
+            width: '85%',
+            margin:'0 auto',
+            fontFamily:'Calibri Light'
+            
+        }
         return (
                 <BrowserRouter>
-                    <div className='container'>
+                    <div style={container_css}>
                         <Header/>
                         <Route exact path="/" component={Landing}/>
                         <Route exact path="/surveys" component={Dashboard}/>

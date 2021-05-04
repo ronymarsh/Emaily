@@ -7,7 +7,7 @@ const Dashboard = () => {
     const wrapper_css={
         display:'flex',
         flexDirection:'column',
-        margin:'1% 20%'
+        margin:'1% 5%'
     }
 
     const addBtn_css={

@@ -16,7 +16,7 @@ class App extends Component {
     render(){
 
         const container_css={
-            width: '85%',
+            width: '90%',
             margin:'0 auto',
             fontFamily:'Calibri Light'
             

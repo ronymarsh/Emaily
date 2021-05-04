@@ -9,7 +9,7 @@ import {VscMail} from 'react-icons/vsc'
 const SurveyFormReview = ({onCancel,formValues,submitSurvey,history}) => {
     
     const wrapper_css={
-        margin:'1% 20%'
+        margin:'1% 5%'
     }
 
     const confirm_css={

@@ -20,7 +20,7 @@ class SurveyForm extends Component {
     render() {
 
         const wrapper_css={
-            margin:'1% 20%'
+            margin:'1% 5%'
         }
 
         const nextBtn_css={

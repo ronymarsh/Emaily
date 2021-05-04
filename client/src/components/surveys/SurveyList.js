@@ -17,13 +17,13 @@ class SurveyList extends Component{
             padding:'2%'
         }
         const title_css={
-            fontSize:'28px'
+            fontSize:'26px'
         }
 
         const votes_css={
             display:'flex',
             justifyContent:'space-around',
-            padding:'2%',
+            padding:'2% 2% 0 2%',
             color:'#f8a500'
 
 

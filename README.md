@@ -7,6 +7,7 @@ Node js <br/>
 MongoDB <br/>
 Express <br/>
 Redux <br/>
+Google OAuth 2.0- user authentication <br/>
 Stripe Checkout- payment provider <br/>
 SendGrid- email provider <br/>
 

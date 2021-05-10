@@ -3,11 +3,13 @@ const passport=require('passport')
 module.exports=(app)=>{
 
     //route handler for logging in with google 
-    app.get('/auth/google',
+    app.get(
+        '/auth/google',
         passport.authenticate('google',{
-            scope:['profile','email']
-        }
-    ))
+            scope:['profile','email'],
+            prompt:'select_account'
+        })
+    )
 
     //route handler for auth callback from google
     app.get(

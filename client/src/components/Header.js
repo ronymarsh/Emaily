@@ -14,13 +14,13 @@ export class Header extends Component {
                 return
             case false: 
                 return (
-                    <div><Link style={link_css} to="/auth/google">Login with Google</Link></div>
+                    <div><a style={link_css} href="/auth/google">Login with Google</a></div>
                 )
             default:
                 return [
                 <div style={header_element} key='1'><Payments/></div>,
                 <div style={header_element} key='3'>Credits: {this.props.auth.credits}</div>,
-                <div style={header_element} key='2'><Link style={link_css} to="/api/logout">Logout</Link></div>
+                <div style={header_element} key='2'><a style={link_css} href="/api/logout">Logout</a></div>
             ]
         }
     }

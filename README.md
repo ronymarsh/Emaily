@@ -7,8 +7,9 @@ Node js <br/>
 MongoDB <br/>
 Express <br/>
 Redux <br/>
-Stripe Checkout- Payment provider <br/>
-SendGrid- Email provider <br/>
+Google OAuth 2.0- user authentication <br/>
+Stripe Checkout- payment provider <br/>
+SendGrid- email provider <br/>
 
 ### Usage
 Click [HERE](https://intense-chamber-30937.herokuapp.com/) to open the appliction
@@ -18,8 +19,8 @@ To send out surveys, you must add credits to your account. Currenly the Stripe C
 
 ### How to add free credits
 Insert the following demo CC information in the payment section: <br/>
-***Email***: any *valid* email <br/>
-***Card number***: 4242  4242  4242  4242 <br/> 
-***Exp***: any *valid* experation date <br/>
-***CVV***: any 3 numbers
+**Email**: any *valid* email <br/>
+**Card number**: 4242  4242  4242  4242 <br/> 
+**Exp**: any *valid* experation date <br/>
+**CVV**: any 3 numbers
 

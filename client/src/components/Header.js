@@ -32,7 +32,7 @@ export class Header extends Component {
             gridTemplateColumns: '30% 70%',
             backgroundColor:'#ff9999',
             color:'white',
-            padding:'1% 0'
+            padding:'1%'
         }
         const left_css={
             width:'100%',
@@ -44,7 +44,8 @@ export class Header extends Component {
             display:'flex',
             justifyContent:'flex-end',
             alignItems:'center',
-            fontSize:'110%'
+            fontSize:'110%',   
+
         }
         const link_css={
             color:'inherit',
